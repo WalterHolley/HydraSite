@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<meta charset = "UTF-8"/>
 <html>
 <head>
-    <title></title>
-    <script src="js/constants.js"></script>
-    <script src="js/main.js"></script>
-</head>
-<body>
-<div>
-    <button type="button" onclick="startGame()">Start Game</button>
-</div>
+   <!--
+    
+    Slay Hydra Game Web Page
+    Author: Jennifer Putnam, Leland Cash, Walter Holley, Nolan Dyer, Amaya Saunsaucie
+    Date: 4/15/2022
+	CMPSCI-4500 Software Development:  Group Project
 
+    Filename: main.html
+   -->
+   
+   <meta charset="utf-8" />
+   <title>Slay Hydra Game</title>
+   <script src="js/constants.js"></script>
+   <script src="js/main.js"></script>
+   <link href="slay_hydra_base.css" rel="stylesheet" />
+   <link href="slay_hydra_layout.css" rel="stylesheet" />
+   <link href="slay_hydra_effects.css" rel="stylesheet" />
+   
+</head>
+
+<body>
+   <header>
+      <nav class="horizontal">
+         <ul>
+            <li><a href="main.html">Home Page</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="leader_board.html">Leader Board</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+         </ul>
+      </nav>
+   </header>
+   <section>
+   <div class = "container">
+		<img src="Slay_Hydra_Title_2_rsz.png" alt="Slay Hydra" />
+		<div>
+			<button type="button" onclick="startGame()">Start Game</button>
+		</div>
+   </div>
+   </section>
+   <footer>
+      Slay Hydra &copy; 2022 English (US) <span><a href="#">About</a>
+	  <a href="#">Help</a></span>
+   </footer>
 </body>
 </html>
