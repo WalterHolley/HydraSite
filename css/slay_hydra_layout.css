@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/*
+	Slay Hydra Game Web Page
+    Author: Jennifer Putnam, Leland Cash, Walter Holley, Nolan Dyer, Amaya Saunsaucie
+    Date: 4/15/2022
+	CMPSCI-4500 Software Development:  Group Project 
+	
+	Slay Hydra Layout Styles
+
+	Filename: slay_hydra_layout.css
+
+*/
+
+html {
+   background-color: rgb(31, 31, 31);
+}
+
+strong {
+   font-weight: bold;
+}
+
+p a {
+   color: black;
+   text-decoration: underline;
+}
+
+body {
+   background-color: rgb(101, 101, 101);
+   background-repeat: no-repeat;
+   float: none;
+   margin: 0px auto;
+   width: 90%;
+   max-width: 1000px;
+   min-width: 800px;
+}
+
+header {
+   width: 100%;
+}
+
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header nav.horizontal {
+   width: 100%;
+}
+
+
+header nav.horizontal li {
+   background-color: rgb(41, 41, 41);
+   display: block;
+   font-family: Tahoma, Geneva, sans-serif;
+   float: left;
+   width: 25%;
+}
+
+
+header nav.horizontal li a {
+   color: white;
+   display: block;
+   font-size: 0.8em;
+   height: 50px; 
+   letter-spacing: 0.1em;   
+   line-height: 50px; 
+   text-align: center;     
+   width: 100%;
+}
+
+header nav.horizontal li a:visited, header nav.horizontal li a:link {
+	color: white;
+}
+
+/* Navigation List Styles */
+
+body header a {
+   background-color: rgb(51, 51, 51);
+}
+
+body > header:active, body > header a:hover {
+   background-color: rgb(108, 105, 120);
+}
+
+/* section layout */
+
+section {
+	width: 90%;
+	margin: auto;
+}
+
+
+/* footer styles */
+
+footer {
+   margin-top: 15px;
+   background-color: rgb(71, 71, 71);
+   color: rgb(231, 231, 231);
+   text-align: right;
+}
+
+footer, footer span  a {
+   font-size: 11px;
+   padding: 10px;
+   color: rgb(231, 231, 231);
+}
+
+footer span a:hover {
+   color: rgb(231, 231, 231);
+   text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+

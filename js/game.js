@@ -9,7 +9,7 @@ const ENEMY_IMAGE_SRC = "./img/ui_shaggy.jpg";
 
 
 //TODO: add a style that gets rid of the margin around the canvas
-const canvasContext = canvas.getContext('2d');
+const ctx = canvas.getContext('2d');
 async function startGame(){
     response = await fetch(DOMAIN_URI + "/start")
     .then((res) => res.json()).then((data) => alert(data.text));
@@ -31,14 +31,23 @@ class Player {
     var playerImage = new Image();
 
     playerImage.onload = function(){
-      canvasContext.drawImage(playerImage, x, y);
+      ctx.drawImage(playerImage, x, y);
     }
     playerImage.src = imageSrc;
 
 
   }
 }
+
 player = new Player(300,300,5, PLAYER_IMAGE_SRC);
 enemy = new Player(600, 0, 5, ENEMY_IMAGE_SRC);
 player.draw(player.x, player.y, player.img);
 enemy.draw(enemy.x, enemy.y, enemy.img);
+
+drawPlayerUI(hp){
+
+}
+
+function drawUI(){
+    ctx
+}
