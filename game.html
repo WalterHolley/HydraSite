@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>I'm off to slay the Hydra!</title>
+    <link href="css/slay_hydra_base.css" rel="stylesheet" />
+    <link href="css/slay_hydra_layout.css" rel="stylesheet" />
+    <link href="css/slay_hydra_effects.css" rel="stylesheet" />
+</head>
+<body>
+<div id="contentDiv">
+    <div id="gameDiv">
+        <div id="actionDiv"></div>
+        <div id="ioDiv">
+            <div id="outputDiv">
+
+            </div>
+            <div id="inputDiv">
+                <p>What's your next move?</p>
+                <input type="radio" id="attack" name="playerAction" value="1">
+                <label for="attack">Attack</label><br>
+                <input type="radio" id="heal" name="playerAction" value="Heal">
+                <label for="heal">Heal</label><br>
+
+                <p>How will you avoid the hydra?</p>
+
+                <p>First Move</p>
+                <input type="radio" id="dodge1" name="firstDodge" value="1">
+                <label for="dodge1">Left</label><br>
+                <input type="radio" id="dodge2" name="firstDodge" value="2">
+                <label for="dodge2">Right</label><br>
+
+                <p>First Move</p>
+                <input type="radio" id="dodge3" name="secondDodge" value="1">
+                <label for="dodge3">Left</label><br>
+                <input type="radio" id="dodge4" name="secondDodge" value="2">
+                <label for="dodge4">Right</label><br>
+
+                <p>First Move</p>
+                <input type="radio" id="dodge5" name="firstDodge" value="1">
+                <label for="dodge5">Left</label><br>
+                <input type="radio" id="dodge6" name="firstDodge" value="2">
+                <label for="dodge6">Right</label><br>
+                <button id="btnSubmit">Submit</button>
+                <button id="btnReset">Reset</button><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<canvas></canvas>
+<script  src="js/game.js"></script>
