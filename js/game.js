@@ -51,3 +51,27 @@ drawPlayerUI(hp){
 function drawUI(){
     ctx
 }
+
+// Starts the battle!
+function startBattle(){
+    var player  = new Player(0,0, 5, PLAYER_IMAGE_SRC)
+    var enemy = new Player(0,0,5 ENEMY_IMAGE_SRC)
+    var doBattle = true;
+
+    //A hydra appears!
+    while(doBattle){
+
+        //Ask for user action
+        //Ask for user dodge plan
+        //send user input to API
+
+        //calculate response from API
+        //Animate results
+        //continue or end loop
+
+    }
+
+    //as for hall of fame name if needed
+
+
+}
