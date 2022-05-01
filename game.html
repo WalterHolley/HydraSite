@@ -9,12 +9,11 @@
 <body>
 <div id="contentDiv">
     <div id="gameDiv">
-        <div id="actionDiv"></div>
+        <div id="actionDiv"><img src='img/warrior_vs_hydra.png' alt="Image of Hydra Monster" /></div>
+		<div id="hydraDiv">Hydra HP: 85</div>		<!--     Print Hydra HP output to this div        -->
         <div id="ioDiv">
-            <div id="outputDiv">
-
-            </div>
             <div id="inputDiv">
+				<img src='img/warrior_torch_2_sm.png' alt="Image of Warrior" />
                 <p>What's your next move?</p>
                 <input type="radio" id="attack" name="playerAction" value="1">
                 <label for="attack">Attack</label><br>
@@ -43,6 +42,10 @@
                 <button id="btnSubmit">Submit</button>
                 <button id="btnReset">Reset</button><br>
             </div>
+			<div id="outputDiv">		<!--     Print User HP output to this div, and other messages to user       -->
+				<p>Hello</p>
+				<p>User HP: 95</p>
+			</div>
         </div>
     </div>
 </div>
