@@ -5,51 +5,66 @@
     <link href="css/slay_hydra_base.css" rel="stylesheet" />
     <link href="css/slay_hydra_layout.css" rel="stylesheet" />
     <link href="css/slay_hydra_effects.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/imageMapper.js"></script>
 </head>
 <body>
+   <header>
+      <nav class="horizontal">
+         <ul>
+            <li><a href="main.html">Home Page</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="leader_board.html">Leader Board</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+         </ul>
+      </nav>
+   </header>
 <div id="contentDiv">
     <div id="gameDiv">
         <div id="actionDiv"><img src='img/warrior_vs_hydra.png' alt="Image of Hydra Monster" /></div>
-		<div id="hydraDiv">Hydra HP: 85</div>		<!--     Print Hydra HP output to this div        -->
         <div id="ioDiv">
             <div id="inputDiv">
-				<img src='img/warrior_torch_2_sm.png' alt="Image of Warrior" />
+				<img src='img/battle_hydra2.png' alt="Image of Warrior" />
                 <p>What's your next move?</p>
-                <input type="radio" id="attack" name="playerAction" value="1">
+                <input type="radio" id="attack" name="playerAction" value="1" onclick="imageMap(1)" />
                 <label for="attack">Attack</label><br>
-                <input type="radio" id="heal" name="playerAction" value="Heal">
+                <input type="radio" id="heal" name="playerAction" value="Heal" onclick="imageMap(2)" />
                 <label for="heal">Heal</label><br>
 
                 <p>How will you avoid the hydra?</p>
 
                 <p>First Move</p>
-                <input type="radio" id="dodge1" name="firstDodge" value="1">
+                <input type="radio" id="dodge1" name="firstDodge" value="1" />
                 <label for="dodge1">Left</label><br>
-                <input type="radio" id="dodge2" name="firstDodge" value="2">
+                <input type="radio" id="dodge2" name="firstDodge" value="2" />
                 <label for="dodge2">Right</label><br>
 
-                <p>First Move</p>
-                <input type="radio" id="dodge3" name="secondDodge" value="1">
+                <p>Second Move</p>
+                <input type="radio" id="dodge3" name="secondDodge" value="1" />
                 <label for="dodge3">Left</label><br>
-                <input type="radio" id="dodge4" name="secondDodge" value="2">
+                <input type="radio" id="dodge4" name="secondDodge" value="2" />
                 <label for="dodge4">Right</label><br>
 
-                <p>First Move</p>
-                <input type="radio" id="dodge5" name="firstDodge" value="1">
+                <p>Third Move</p>
+                <input type="radio" id="dodge5" name="thirdDodge" value="1" />
                 <label for="dodge5">Left</label><br>
-                <input type="radio" id="dodge6" name="firstDodge" value="2">
+                <input type="radio" id="dodge6" name="thirdDodge" value="2" />
                 <label for="dodge6">Right</label><br>
+				<!--<input type="submit" value="Submit Moves" />
+				<input type="reset" value="Reset Moves" />-->
                 <button id="btnSubmit">Submit</button>
                 <button id="btnReset">Reset</button><br>
             </div>
-			<div id="outputDiv">		<!--     Print User HP output to this div, and other messages to user       -->
-				<p>Hello</p>
+			<div id="outputDiv">		<!--     Print User and Hydra HP output to this div, and other messages to user       -->
 				<p>User HP: 95</p>
+				<p>Hydra HP: 90</p>
 			</div>
         </div>
     </div>
 </div>
-
+   <footer>
+      Slay Hydra &copy; 2022 English (US) <span><a href="#">About</a>
+	  <a href="#">Help</a></span>
+   </footer>
 </body>
 </html>
 <canvas></canvas>
