@@ -13,9 +13,9 @@
    
    <meta charset="utf-8" />
    <title>Slay Hydra Game</title>
-   <link href="slay_hydra_base.css" rel="stylesheet" />
-   <link href="slay_hydra_layout.css" rel="stylesheet" />
-   <link href="slay_hydra_effects.css" rel="stylesheet" />
+   <link href="css/slay_hydra_base.css" rel="stylesheet" />
+   <link href="css/slay_hydra_layout.css" rel="stylesheet" />
+   <link href="css/slay_hydra_effects.css" rel="stylesheet" />
    
 </head>
 
@@ -29,11 +29,50 @@
             <li><a href="faq.html">FAQ</a></li>
          </ul>
       </nav>
-      <img src="Slay_Hydra_Logo_transparent_rsz.png" alt="Slay Hydra" />
+      <img src="img/Slay_Hydra_Logo_transparent_rsz.png" alt="Slay Hydra" />
    </header>
    <section>
       <article>
-         <h1>Frequently Asked Questions</h1>
+         <h1>Frequently Asked Questions</h1></br>
+		 <dl>
+			<dt><strong>Is Slay Hydra free to play?</strong></dt>
+			<dd>Yes.</dd></br>
+			<dt><strong>How can I play Slay Hydra?</strong></dt>
+			<dd>Just click the "Play Game" button on the home page.</dd></br>
+			<dt><strong>Why is it so difficult to beat Hydra?</strong></dt>
+			<dd>You can play Slay Hydra on Easy Mode, Medium Mode, or Hard Mode.</dd></br>
+			<dt><strong>What is the minimum age required to play Slay Hydra?</strong></dt>
+			<dd>Slay Hydra is designed for children aged 12-14, but it is suitable for all ages.</dd></br>
+			<dt><strong>How is the game played?</strong></dt>
+			<dd>After beginning the game the player will be 
+				asked which difficulty they would like to play on. After this the first round will start. Each 
+				round the player and Hydra will start by picking their move sequences. The winner of the
+				round will be displayed. If the player beats Hydra for that round, the player gets
+				to choose whether to heal or attack. Healing will increase the player's health. 
+				Attacking will decrease the Hydra's health. Then the round will end and a new 
+				round is started. This repeats until either the player or the hydra runs out of health.</dd></br>
+			<dt><strong>What is the math behind the game?</strong></dt>
+			<dd>Slay Hydra is based on the classic game of probability, the Three Penny Game.
+				The Three-Penny Game can be used to demonstrate the probability of sequences of 
+				coin tosses. The idea is that whichever sequence of coin tosses Player 1 chooses, 
+				Player 2 can choose a sequence more likely to be tossed. In the Slay Hydra version of the game, 
+				each player chooses a sequence of 3 moves(right or left). The computer then generates 
+				a 3 move series for the monster. Finally, the computer generates a series of random moves until 
+				the player or monster gets a combination that matches what they’ve selected. Whoever's
+				sequence is first matched by the computer's random right/left move sequence wins the round.</dd></br>
+			<dt><strong>What's the trick to beating Hydra in this game of probability?</strong></dt>
+			<dd>When the game is in hard mode, Hydra has a greater probability of winning because it 
+				understands how to choose a sequence which is more likely to occur before the player’s 
+				sequence. For example, let’s say the player chooses the sequence HHH. The sequence 
+				HHH must be preceded by a T, unless HHH is the first sequence tossed by the 
+				computer. Hydra will use this knowledge to pick the sequence THH. Once the sequence 
+				THH turns up, the game is over and Hydra has won. There are no more coin tosses, so 
+				HHH will never occur. In other words, Hydra will use the knowledge that THH will 
+				always occur before HHH, unless HHH are the first 3 coins tossed. The probability that 
+				any sequence of 3 coin tosses will occur is 0.5 * 0.5 * 0.5 = 0.125, or ⅛. Hydra’s 
+				probability of beating the player’s sequence, HHH, with the better sequence, THH, is ⅞,
+				or 87.5%.</dd>
+		 </dl>
       </article>
    </section>
    <footer>
