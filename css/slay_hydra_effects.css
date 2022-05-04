@@ -15,7 +15,7 @@
 /* HTML Styles */
 
 html {
-	background-image: url(img/ocean_bk.jpg);
+	background-image: url(../img/ocean_bk.jpg);
 	background-repeat: round;
 	width: 100%;
 	background-attachment: fixed;
@@ -24,7 +24,7 @@ html {
 /* Body Styles */
 
 body {
-	background:	url(img/foreground_7.png) round;
+	background:	url(../img/foreground_7.png) round;
 	box-shadow: rgb(31, 31, 31) 30px 0px 45px,
 				rgb(31, 31, 31) -30px 0px 45px;
 }
@@ -62,6 +62,16 @@ section button:hover {
   background-color: rgb(41, 41, 41);
 }
 
+section article h1 {
+	font-family: Dacian Donarium, Helvetica;
+	font-size: 1.5em;
+}
+#play {
+	font-family: Dacian Donarium, Helvetica;
+	font-size: 1.2em;
+	text-align: center;
+}
+
 /* Game Screen Styles */
 #gameDiv button {
   border: 5px outset rgb(211, 211, 255);
@@ -94,22 +104,6 @@ section button:hover {
   margin-left: auto;
   margin-right: auto;
 }
-#actionDiv {
-	position: relative;
-}
-#hydraDiv {
-	position: absolute;
-	top: 60px;
-	right: 400px;
-	font-family: Dacian Donarium, Helvetica;
-	font-size: 1.5em;
-	background-color: rgb(169, 29, 24);
-	color: white;
-	height: 55px;
-	width: 100px;
-	box-shadow: rgb(31, 31, 31) 3px 0px 6px,
-				rgb(31, 31, 31) -3px 0px 6px;
-}
 
 #inputDiv img {
 	float: left;
@@ -137,4 +131,3 @@ section button:hover {
 footer {
 	border-top: 2px solid rgb(171, 171, 171);
 }
-
