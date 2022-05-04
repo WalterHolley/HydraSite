@@ -22,12 +22,23 @@
     <div id="gameDiv">
         <div id="actionDiv"><img src='img/warrior_vs_hydra.png' alt="Image of Hydra Monster" /></div>
         <div id="ioDiv">
-            <div id="inputDiv">
+            <div id="playerInfoForm">
+              <span>Name:&nbsp;</span><input type="text" id="playerName" /><br>
+              <span>Difficulty:&nbsp;</span>
+              <input type="radio" id="easy" name="difficulty" value=1 />
+              <label for="easy">Easy</label>
+              <input type="radio" id="medium" name="difficulty" value=2 />
+              <label for="easy">Medium</label>
+              <input type="radio" id="hard" name="difficulty" value=3 />
+              <label for="easy">Hard</label><br>
+              <button id="btnStart">Go Forth</button>
+            </div>
+            <div id="inputDiv" style="display: none">
 				<img src='img/battle_hydra2.png' alt="Image of Warrior" />
                 <p>What's your next move?</p>
                 <input type="radio" id="attack" name="playerAction" value="1" onclick="imageMap(1)" />
                 <label for="attack">Attack</label><br>
-                <input type="radio" id="heal" name="playerAction" value="Heal" onclick="imageMap(2)" />
+                <input type="radio" id="heal" name="playerAction" value="2" onclick="imageMap(2)" />
                 <label for="heal">Heal</label><br>
 
                 <p>How will you avoid the hydra?</p>
@@ -51,8 +62,8 @@
                 <label for="dodge6">Right</label><br>
 				<!--<input type="submit" value="Submit Moves" />
 				<input type="reset" value="Reset Moves" />-->
-                <button id="btnSubmit">Submit</button>
-                <button id="btnReset">Reset</button><br>
+                <button id="btnSubmit">SLAY</button>
+                <button id="btnReset">Lets Rethink This</button><br>
             </div>
 			<div id="outputDiv">		<!--     Print User and Hydra HP output to this div, and other messages to user       -->
 				<p>User HP: 95</p>
@@ -68,4 +79,4 @@
 </body>
 </html>
 <canvas></canvas>
-<script  src="js/game.js"></script>
+<script  src="js/game2.js"></script>
