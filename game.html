@@ -34,7 +34,7 @@
               <button id="btnStart">Go Forth</button>
             </div>
             <div id="inputDiv" style="display: none">
-				<img src='img/battle_hydra2.png' alt="Image of Warrior" />
+				<img id="playerImage" src='img/battle_hydra2.png' alt="Image of Warrior" />
                 <p>What's your next move?</p>
                 <input type="radio" id="attack" name="playerAction" value="1" onclick="imageMap(1)" />
                 <label for="attack">Attack</label><br>
@@ -66,8 +66,8 @@
                 <button id="btnReset">Lets Rethink This</button><br>
             </div>
 			<div id="outputDiv">		<!--     Print User and Hydra HP output to this div, and other messages to user       -->
-				<p>User HP: 95</p>
-				<p>Hydra HP: 90</p>
+				<p><span id="playerId"></span>: <span id="playerHP"></span>&nbsp;HP</p>
+				<p>Hydra:&nbsp<span id="hydraHP"></span>&nbsp;HP</p>
 			</div>
         </div>
     </div>
