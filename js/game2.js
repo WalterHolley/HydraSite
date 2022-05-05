@@ -52,6 +52,33 @@ function startGame(){
   }
 }
 
+function fakeResult(){
+  if(Math.floor(Math.random() * 2)){
+    return true;
+  }
+
+  return false;
+}
+
+function clearForm(){
+  var action = document.getElementsByName("playerAction");
+  var dodge1 = document.getElementsByName("firstDodge");
+  var dodge2 = document.getElementsByName("secondDodge");
+  var dodge3 = document.getElementsByName("thirdDodge");
+
+  clearRadio(action);
+  clearRadio(dodge1);
+  clearRadio(dodge2);
+  clearRadio(dodge3);
+
+}
+
+function clearRadio(radioElement){
+  for(i = 0; i < radioElement.length; i++){
+    radioElement[i].checked = false;
+  }
+}
+
 function doAttack(){
   var action = document.getElementsByName("playerAction");
   var dodge1 = document.getElementsByName("firstDodge");
@@ -59,23 +86,60 @@ function doAttack(){
   var dodge3 = document.getElementsByName("thirdDodge");
 
   if(!isRadioSelected(action) || !isRadioSelected(dodge1) || !isRadioSelected(dodge2) || !isRadioSelected(dodge3)){
-    alert("Please chose an action, a first move, second move, and third move");
+    alert("Please chose a action (Attack or Heal), a first move, second move, and third move");
   }
   else{
-    alert("ok");
+    var playerHP = document.getElementById("playerHP").innerHTML;
+    var enemyHP = document.getElementById("hydraHP").innerHTML;
     //disable submit
 
     //send data to API and wait for results
+    if(fakeResult()){
+      if(getRadioValue(action) == 1){
+        enemyHP = enemyHP - 1;
+      }
+      else{
+        playerHP = playerHP + 1;
+      }
+    }
+    else{
+      playerHP = playerHP - 1;
+    }
 
     //clear selections
+    clearForm();
+
+    if(playerHP == 0){
+      processGameOver(false);
+    }
+    else if (enemyHP == 0) {
+      processGameOver(true);
+    }
 
     //update UI
+    document.getElementById("playerHP").innerHTML = playerHP;
+    document.getElementById("hydraHP").innerHTML = enemyHP;
 
 
   }
 }
 
-function processGameOver(){
+function sleep(){
+  return new Promise(resolve => setTimeout(resolve, 5000));
+}
+
+async function processGameOver(playerWon){
+    document.getElementById("btnSubmit").enabled = false;
+    if(playerWon){
+      alert("You are victorious!");
+    }
+    else{
+      alert("You've lost, but live to fight another day!");
+    }
+
+    await sleep();
+    window.location.href = "leader_board.html";
+
 
 }
 
