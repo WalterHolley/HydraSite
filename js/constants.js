@@ -15,3 +15,20 @@ async function getData(url = ''){
   return response.json();
 
 }
+
+async function postData(url = '', data = {}){
+  const response = await fetch(url, {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'omit',
+    headers:{
+      'Content-Type': 'application/json'
+    },
+    redirect:'follow',
+    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(data);
+  });
+  return response.json();
+
+}
