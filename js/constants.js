@@ -27,7 +27,7 @@ async function postData(url = '', data = {}){
     },
     redirect:'follow',
     referrerPolicy: 'no-referrer',
-    body: JSON.stringify(data);
+    body: JSON.stringify(data)
   });
   return response.json();
 
