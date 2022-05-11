@@ -44,26 +44,25 @@
                 <p>How will you avoid the hydra?</p>
 
                 <p>First Move</p>
-                <input type="radio" id="dodge1" name="firstDodge" value="1" />
+                <input type="radio" id="dodge1" name="firstDodge" value="0" />
                 <label for="dodge1">Left</label><br>
-                <input type="radio" id="dodge2" name="firstDodge" value="2" />
+                <input type="radio" id="dodge2" name="firstDodge" value="1" />
                 <label for="dodge2">Right</label><br>
 
                 <p>Second Move</p>
-                <input type="radio" id="dodge3" name="secondDodge" value="1" />
+                <input type="radio" id="dodge3" name="secondDodge" value="0" />
                 <label for="dodge3">Left</label><br>
-                <input type="radio" id="dodge4" name="secondDodge" value="2" />
+                <input type="radio" id="dodge4" name="secondDodge" value="1" />
                 <label for="dodge4">Right</label><br>
 
                 <p>Third Move</p>
-                <input type="radio" id="dodge5" name="thirdDodge" value="1" />
+                <input type="radio" id="dodge5" name="thirdDodge" value="0" />
                 <label for="dodge5">Left</label><br>
-                <input type="radio" id="dodge6" name="thirdDodge" value="2" />
+                <input type="radio" id="dodge6" name="thirdDodge" value="1" />
                 <label for="dodge6">Right</label><br>
-				<!--<input type="submit" value="Submit Moves" />
-				<input type="reset" value="Reset Moves" />-->
+
                 <button id="btnSubmit">SLAY</button>
-                <button id="btnReset">Lets Rethink This</button><br>
+                <button id="btnReset">Wait...</button><br>
             </div>
 			<div id="outputDiv">		<!--     Print User and Hydra HP output to this div, and other messages to user       -->
 				<p><span id="playerId"></span>: <span id="playerHP"></span>&nbsp;HP</p>
@@ -79,4 +78,5 @@
 </body>
 </html>
 <canvas></canvas>
-<script  src="js/game2.js"></script>
+<script type="text/javascript" src="js/constants.js"></script>
+<script type="text/javascript" src="js/game2.js"></script>

@@ -1,3 +1,30 @@
+
+const playGame = (reqData) => {
+  postData(DOMAIN_URI + "play", reqData)
+  .then((res) =>{return res;
+  })
+  .then((res) => {
+    updateUI(res);
+    if(res.isGameOver){
+      processGameOver(res.playerWon)
+    }
+    else{
+      //enable submit button
+      document.getElementById("btnSubmit").disabled = false;
+    }
+  })
+};
+
+const startGameSession = (reqData) => {
+  postData(DOMAIN_URI + "start", reqData)
+  .then((res) => {
+    return res;
+  })
+  .then((res) => {
+    updateUI(res);
+  })
+};
+
 function isRadioSelected(element){
     var result = false;
 
@@ -32,7 +59,7 @@ function startGame(){
   let difficulty = document.getElementsByName('difficulty');
   difficulty.forEach((d) => {
     if (d.checked){
-      difficultySetting = d;
+      difficultySetting = d.value;
     }
   });
 
@@ -44,20 +71,13 @@ function startGame(){
     document.getElementById("playerInfoForm").style.display = "none";
 
     //start game session
+    var data = {difficultyCode: difficultySetting, playerName: playerName};
+    var result = startGameSession(data);
 
     //show gameplay div
     document.getElementById("inputDiv").style.display = "block";
 
-    updateUI();
   }
-}
-
-function fakeResult(){
-  if(Math.floor(Math.random() * 2)){
-    return true;
-  }
-
-  return false;
 }
 
 function clearForm(){
@@ -89,43 +109,25 @@ function doAttack(){
     alert("Please chose a action (Attack or Heal), a first move, second move, and third move");
   }
   else{
-    var playerHP = document.getElementById("playerHP").innerHTML;
-    var enemyHP = document.getElementById("hydraHP").innerHTML;
     //disable submit
+    document.getElementById("btnSubmit").disabled = true;
+
+    var data = {action: getRadioValue(action),
+      directionSequence:[getRadioValue(dodge1),
+        getRadioValue(dodge2), getRadioValue(dodge3)]};
 
     //send data to API and wait for results
-    if(fakeResult()){
-      if(getRadioValue(action) == 1){
-        enemyHP = enemyHP - 1;
-      }
-      else{
-        playerHP = playerHP + 1;
-      }
-    }
-    else{
-      playerHP = playerHP - 1;
-    }
+    playGame(data);
+
 
     //clear selections
     clearForm();
-
-    if(playerHP == 0){
-      processGameOver(false);
-    }
-    else if (enemyHP == 0) {
-      processGameOver(true);
-    }
-
-    //update UI
-    document.getElementById("playerHP").innerHTML = playerHP;
-    document.getElementById("hydraHP").innerHTML = enemyHP;
-
 
   }
 }
 
 function sleep(){
-  return new Promise(resolve => setTimeout(resolve, 5000));
+  return new Promise(resolve => setTimeout(resolve, 2000));
 }
 
 async function processGameOver(playerWon){
@@ -137,20 +139,20 @@ async function processGameOver(playerWon){
       alert("You've lost, but live to fight another day!");
     }
 
-    await sleep();
+    //await sleep();
     window.location.href = "leader_board.html";
 
 
 }
 
-function updateUI(){
+function updateUI(data){
 
   //Update Messages
   document.getElementById("playerId").innerHTML = document.getElementById("playerName").value;
 
   //update HP
-  document.getElementById("playerHP").innerHTML = 5;
-  document.getElementById("hydraHP").innerHTML = 5;
+  document.getElementById("playerHP").innerHTML = data.playerHp;
+  document.getElementById("hydraHP").innerHTML = data.enemyHp;
 
   //check for game over
 

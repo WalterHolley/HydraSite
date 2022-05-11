@@ -28,6 +28,7 @@ function getDifficultyString(code){
       break;
     case 3:
       result = "Hard";
+      break;
     default:
       result = "U L T R A";
   }
