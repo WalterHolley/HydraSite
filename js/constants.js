@@ -1,5 +1,5 @@
-//var DOMAIN_URI = "https://immense-waters-91788.herokuapp.com/";
-var DOMAIN_URI ="http://localhost:8080/";
+var DOMAIN_URI = "https://immense-waters-91788.herokuapp.com/";
+//var DOMAIN_URI ="http://localhost:8080/";
 
 async function getData(url = ''){
   const response = await fetch(url, {
